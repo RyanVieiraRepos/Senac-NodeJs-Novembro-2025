@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,11 @@
     "url": "https://github.com/RyanVieiraRepos/Senac-NodeJs-Novembro-2025/issues"
   },
   "homepage": "https://github.com/RyanVieiraRepos/Senac-NodeJs-Novembro-2025#readme",
-  "description": "Primeiro projeto com node"
+  "description": "Primeiro projeto com node",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
