@@ -1,27 +1,32 @@
 const express = require("express")
 const app = express()
+app.use(express.json)
+
+const marvel = ["Homem Aranha", "Capitã Marvel", "Homem de ferro"]
 
 
 
-app.get('/',function (req,res){
+
+app.post('/herois', function(req,res){
+    let novoHeroi = req.body.nome
+    herois.push(novoHeroi)
+    res.send('ok')
+})
+
+
+app.get('/marvel/:id', function (req, res) { // pegando o do objeto req, o 
+    const id = req.params.id
+    res.send(marvel[id - 1])
+
+})
+app.get('/', function (req, res) {
     res.send('api')
 
 })
 
-app.get('/ptbr',function (req,res){
-    res.send('olá mundo')
 
-})
 
-app.get('/es',function (req,res){
-    res.send('hola')
 
-})
-
-app.get('/eg',function (req,res){
-    res.send('Hello World')
-
-})
 
 // app.get('/oi',function (req,res){
 //    res.send('hello world')    
